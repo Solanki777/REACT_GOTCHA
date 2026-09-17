@@ -1,12 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react'
 
 function App() {
   return (
-    <React.Fragment>
-    <p>This is not parent now on {3 * 9 }  you know</p>
-
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,12 +15,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Namste React
+          Learn React
         </a>
       </header>
     </div>
-    </React.Fragment>
-
   );
 }
 
