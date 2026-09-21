@@ -29,10 +29,10 @@ function App() {
   return (
   <>
   <Navbar/>
-  <ProductList product = {product}/>
+  <ProductList productList = {product}/>
   {/* <Footer/> */}
   </>
-  );
+  ); 
 }
 
 export default App;
