@@ -19,7 +19,7 @@ export default function ProductList(props) {
   
   return (
     props.productList.map((product,idx)=>{
-      return <Product product = {product} key = {idx}/>
+      return <Product product = {product} key = {idx} icr_quantity = {props.icr_quantity} idx = {idx}/>
     })
   )
   

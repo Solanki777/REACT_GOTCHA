@@ -1,11 +1,11 @@
-
 import './App.css';
 import Navbar from './components/navbar';
 import ProductList from './components/ProductList';
+import React ,{useState} from 'react';
 // import Footer from './components/Footer';
 
 function App() {
-  const product = [
+  const intialproduct = [
     {
       price : 200000,
       name : "Iphone 18 pro",
@@ -26,11 +26,21 @@ function App() {
     
   ]
 
+  let [product , setproduct] = useState(intialproduct)
+
+  const icr_quantity = (idx) =>{
+
+    // copying the list 
+    let newproduct = [...product]
+    newproduct[idx].quantity++
+    setproduct(newproduct)
+  }
+
   return (
   <>
   <Navbar/>
   <main className = "container mt-5">
-  <ProductList productList = {product}/>
+  <ProductList productList = {product} icr_quantity = {icr_quantity}/>
   </main>
   {/* <Footer/> */}
   </>

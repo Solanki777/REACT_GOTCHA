@@ -1,6 +1,14 @@
 import React from "react";
 
 export default function Product(props) {
+  function incr_quantity(idx){
+
+  }
+
+
+
+
+
   return (
     <div className = "row">
       <div className="col-8">
@@ -13,14 +21,15 @@ export default function Product(props) {
           </h2>
         </div>
         <div>
-          <button type="button" class="btn btn-primary btn-sm">
+          <button type="button" class="btn btn-primary btn-sm"  onClick={
+            () => {props.icr_quantity(props.idx)}
+          }>
             +
           </button>
 
           <h2 class="btn sm">{props.product.quantity}</h2>
 
           <button type="button" class="btn btn-secondary btn-sm">
-            {" "}
             -
           </button>
         </div>
