@@ -1,23 +1,19 @@
 import React from 'react'
 
-export default function Footer() {
+export default function Footer(props) {
   return (
     <div className='row fixed-bottom'>
-        <div className='col-8'>
-            <button className='btn btn-primary'>
+        <button className='btn btn-primary col-2'>
                 Reset
-            </button>
-        </div>
-        <div className='col-2 bg-dark'>
-            here the values are displyed
+        </button>
+        <div className='col-8 bg-dark text-white'>
+            {props.total}
             
         </div>
-
-        <div className='col-2'>
-            <button className='btn btn-danger'>
+        <button className='btn btn-danger col-2'>
                 PayNow
-            </button>
-        </div>
+        </button>
+        
     </div>
   )
 }
