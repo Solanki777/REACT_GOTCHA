@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/navbar';
 import ProductList from './components/ProductList';
 import React ,{useState} from 'react';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 function App() {
   const intialproduct = [
@@ -50,7 +50,7 @@ function App() {
   <main className = "container mt-5">
   <ProductList productList = {product} icr_quantity = {icr_quantity} dec_quantity = {dec_quantity}/>
   </main>
-  {/* <Footer/> */}
+  <Footer/>
   </>
   ); 
 }
