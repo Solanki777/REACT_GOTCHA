@@ -38,7 +38,9 @@ function App() {
   
   const dec_quantity = (idx) => {
     let newproduct = [...product]
-    newproduct[idx].quantity--
+    if (newproduct[idx].quantity > 0) {
+      newproduct[idx].quantity--
+    }
     setproduct(newproduct)
   }
 
