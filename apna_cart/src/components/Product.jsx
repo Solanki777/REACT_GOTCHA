@@ -29,7 +29,9 @@ export default function Product(props) {
 
           <h2 class="btn sm">{props.product.quantity}</h2>
 
-          <button type="button" class="btn btn-secondary btn-sm">
+          <button type="button" class="btn btn-secondary btn-sm" onClick={
+            () => {props.dec_quantity(props.idx)}
+          }>
             -
           </button>
         </div>

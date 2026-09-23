@@ -35,12 +35,18 @@ function App() {
     newproduct[idx].quantity++
     setproduct(newproduct)
   }
+  
+  const dec_quantity = (idx) => {
+    let newproduct = [...product]
+    newproduct[idx].quantity--
+    setproduct(newproduct)
+  }
 
   return (
   <>
   <Navbar/>
   <main className = "container mt-5">
-  <ProductList productList = {product} icr_quantity = {icr_quantity}/>
+  <ProductList productList = {product} icr_quantity = {icr_quantity} dec_quantity = {dec_quantity}/>
   </main>
   {/* <Footer/> */}
   </>
