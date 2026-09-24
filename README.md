@@ -14,3 +14,7 @@ props - pass data or properties to other components in read mode only
 <button type="button" class="btn btn-primary btn-sm"  onClick={
             () => {props.icr_quantity(props.idx)}
           }>
+
+map() is used when you want to create a new array by transforming every item.
+
+forEach() is used when you simply want to do something something for every item.

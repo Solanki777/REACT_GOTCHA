@@ -59,6 +59,15 @@ function App() {
     setnewtotal(0)
   }
 
+  const remove = (idx) =>{
+    let newprod = [...product]
+    let newtotal = oldtotal
+    newtotal -= newprod[idx].quantity * newprod[idx].price
+    newprod.splice(idx , 1)
+    setproduct(newprod)
+    setnewtotal(newtotal)
+  }
+
 
 
   return (
@@ -69,6 +78,7 @@ function App() {
           productList={product}
           icr_quantity={icr_quantity}
           dec_quantity={dec_quantity}
+          remove = {remove}
         />
       </main>
       <Footer  total = {oldtotal}  resetq = {resetq}/>

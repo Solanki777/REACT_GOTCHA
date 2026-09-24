@@ -40,10 +40,22 @@ export default function Product(props) {
       </div>
 
 
-      <div className = "col-4">
+      <div className = "col-2">
         {props.product.quantity * props.product.price}
 
       </div>
+
+      <div className = "col-2">
+        <button className = " btn btn-danger"
+        onClick = {
+          () => {props.remove(props.idx)}
+        }>
+          Remove
+        </button>
+        
+
+      </div>
+
     </div>
   );
 }
