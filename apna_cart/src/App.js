@@ -50,6 +50,17 @@ function App() {
     setproduct(newproduct);
   };
 
+  const resetq = () => {
+    let newprod = [...product]
+    newprod.map((product) => {
+      product.quantity = 0
+    })
+    setproduct(newprod)
+    setnewtotal(0)
+  }
+
+
+
   return (
     <>
       <Navbar />
@@ -60,7 +71,7 @@ function App() {
           dec_quantity={dec_quantity}
         />
       </main>
-      <Footer  total = {oldtotal} />
+      <Footer  total = {oldtotal}  resetq = {resetq}/>
     </>
   );
 }
