@@ -18,3 +18,6 @@ props - pass data or properties to other components in read mode only
 map() is used when you want to create a new array by transforming every item.
 
 forEach() is used when you simply want to do something something for every item.
+
+slice - not changes the original array , it create a copy 
+splice - changes the original array
