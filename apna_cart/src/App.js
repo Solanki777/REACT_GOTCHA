@@ -34,7 +34,7 @@ function App() {
     let newproduct = [...product];
     let total = oldtotal;
     newproduct[idx].quantity++;
-    total += intialproduct[idx].price;
+    total += newproduct[idx].price;
     setnewtotal(total);
     setproduct(newproduct);
   };
@@ -44,7 +44,7 @@ function App() {
     let total = oldtotal;
     if (newproduct[idx].quantity > 0) {      
       newproduct[idx].quantity--;
-      total -= intialproduct[idx].price;
+      total -= newproduct[idx].price;
     }
 
     setnewtotal(total);
