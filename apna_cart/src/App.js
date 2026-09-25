@@ -3,7 +3,7 @@ import Navbar from "./components/navbar";
 import ProductList from "./components/ProductList";
 import React, { use, useState } from "react";
 import Footer from "./components/Footer";
-import addproduct from "./components/addproduct";
+import Addproduct from "./components/Addproduct";
 
 function App() {
   const intialproduct = [
@@ -75,7 +75,7 @@ function App() {
     <>
       <Navbar />
       <main className="container mt-5">
-        <addproduct/>
+        <Addproduct/>
         <ProductList
           productList={product}
           icr_quantity={icr_quantity}
