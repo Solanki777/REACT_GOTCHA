@@ -1,24 +1,35 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-export default function addproduct() {
+export default function Addproduct(props) {
+
+  const [name,setname] = useState("")
+  const [price,setprice] = useState("") 
+
+  const sbmt =(e) =>{
+    e.preventDefault()
+    props.addItem(name,price)
+  }
   return (
-    <form>
+    <form className="mb-5" onSubmit={sbmt}>
       <div className='row'>
         
         <div className = 'col-8'>
           
-          <input type="text" className="" placeholder='item name' required/>
+
+          <input type="text" className="" placeholder='item name' 
+          onChange={(e) => setname(e.target.value)}  required/>
 
         </div>
         
-        <div className="col-2">
+        <div className="col-2 ">
           
-          <input type="number" className="" placeholder='item price' required/>
+          <input type="number" className="" placeholder='item price' 
+           onChange={(e) => setprice(e.target.value)} required/>
 
         </div>
         
-        <div className="col-2">
-          <button className="btn btn-danger">
+        <div className="col-2 ">
+          <button className="btn btn-danger ">
             add
           </button> 
         </div>
