@@ -13,7 +13,10 @@ import Product from "./Product";
 // OR
 
 export default function ProductList(props) {
-  return props.productList.map((product, idx) => {
+  return props.productList.length > 0
+      ? 
+      props.productList.map((product, idx) => {
+    
     return (
       <Product
         product={product}
@@ -23,6 +26,7 @@ export default function ProductList(props) {
         dec_quantity={props.dec_quantity}
         remove = {props.remove}
       />
-    );
-  });
+    )
+  })
+  : <h1> No product in the cart</h1>
 }

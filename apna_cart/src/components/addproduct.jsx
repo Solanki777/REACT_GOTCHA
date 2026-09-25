@@ -2,17 +2,18 @@ import React from 'react'
 
 export default function addproduct() {
   return (
-    <div className='row'>
+    <form>
+      <div className='row'>
         
         <div className = 'col-8'>
           
-          <input type="text" className="" placeholder='item name' />
+          <input type="text" className="" placeholder='item name' required/>
 
         </div>
         
         <div className="col-2">
           
-          <input type="number" className="" placeholder='item price' />
+          <input type="number" className="" placeholder='item price' required/>
 
         </div>
         
@@ -22,5 +23,6 @@ export default function addproduct() {
           </button> 
         </div>
       </div>
+    </form>
   )
 }
